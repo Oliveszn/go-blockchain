@@ -36,7 +36,7 @@ func NewBlock(prev *Block, data string) *Block {
 	return b
 }
 
-func GenesisBlock() *Block {
+func NewGenesisBlock() *Block {
 	b := &Block{
 		Index:     0,
 		Timestamp: time.Now().Unix(),
