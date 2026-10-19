@@ -17,8 +17,8 @@ type Block struct {
 }
 
 func (b *Block) CalculateHash() string {
-	c := *b     // copy, so we never mutate the original
-	c.Hash = "" // the hash can't include itself
+	c := *b // copy, so we never mutate the original
+	c.Hash = ""
 
 	data, _ := json.Marshal(c)
 	sum := sha256.Sum256(data)
